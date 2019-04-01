@@ -3,18 +3,23 @@ let drawing = false;
 
 let stroke_color = document.querySelector("#stroke_color");
 
+let color = stroke_color.value;
+console.log('Starter color: ', color);
+
 stroke_color.onchange = (evt) => {
-	stroke_color = evt.target.value;
-	console.log(stroke_color);
+	color = evt.target.value;
+	console.log('Current color: ', color);
 }
 
 let stroke_size = document.querySelector("#stroke_size");
 
+let size = stroke_size.value;
+console.log('Starter stroke: ', size);
+
 stroke_size.onchange = (evt) => {
-	stroke_size = evt.target.value;
-	console.log(stroke_size);
+	size = evt.target.value;
+	console.log('Current stroke: ', size);
 }
-console.log(stroke_size.value);
 
 
 function draw_point() {
@@ -26,8 +31,8 @@ function draw_point() {
 	svg.append('circle')
 		.attr('cx', coordinates[0])
 		.attr('cy', coordinates[1])
-		.attr('r', `${stroke_size}`)
-		.style('fill', `${stroke_color}`);
+		.attr('r', `${size}`)
+		.style('fill', `${color}`);
 }
 
 svg.on('mousedown', () => {

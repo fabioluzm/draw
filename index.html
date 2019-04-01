@@ -13,6 +13,8 @@
 			margin: 0;
 			padding: 0;
 			text-align: center;
+			background: #303030;
+			color: #eee;
 		}
 
 		h1,
@@ -26,6 +28,7 @@
 
 		svg {
 			border: 1px solid black;
+			background: #fff;
 		}
 	</style>
 
@@ -35,23 +38,23 @@
 	<h1>Drawing Table</h1>
 	<form>
 		<select name="stroke_color" id="stroke_color">
-			<option value="black">Black</option>
+			<option value="black" selected>Black</option>
 			<option value="green">Green</option>
 			<option value="red">Red</option>
 			<option value="blue">Blue</option>
 		</select>
 
 		<select name="stroke_size" id="stroke_size">
-			<option value=1>1</option>
-			<option value=2>2</option>
-			<option value=3>3</option>
-			<option value=4 selected>4</option>
-			<option value=5>5</option>
-			<option value=6>6</option>
-			<option value=7>7</option>
-			<option value=8>8</option>
-			<option value=9>9</option>
-			<option value=10>10</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3" selected>3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
 		</select>
 
 		<button id="reset">Apagar</button>
